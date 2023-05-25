@@ -57,7 +57,9 @@ class TradeStationSignal:
                 elif line.startswith('order#:'):
                     params = line.split(' ')
                     self.order_id = params[1]
-
+         
+        self.order_type = 'market'
+        
     def _parse_subject(self, line):
         # ensure this email is intended
         if 'tradestation - ' not in line:
@@ -99,9 +101,6 @@ class TradeStationSignal:
             return False
         if not self.action or self.action not in ['sell', 'buy']:
             print("Error: unexpected action: %s" % self.action)
-            return False
-        if not self.order_type or self.order_type not in ['market']:
-            print("Error: unexpected order type: %s" % self.order_type)
             return False
         if not self.quantity or self.quantity <= 0:
             print("Error: unexpected quantity: %d" % self.quantity)
