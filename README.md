@@ -5,7 +5,7 @@ This is a python (v2.7) application with minimal UI that replicates trade signal
 - ibpy2
 - pyinstaller 3.6 (wont work with newer versions)
 - pyyaml
-- quickfix
+- quickfix (install using the zip file included instead of using pip install quickfix)
 
 ## Configuration
 IB clients are configured in a yaml file under "conf" dir. 
@@ -29,4 +29,4 @@ I choose to not use "one file" executable distribution, because:
 - One file executable is less secure and takes longer to start since it needs to extract all files to a temp dir at run time before executing the main program.
 
 ## Limitations
-Currently works on Stocks with Market orders ONLY.
+Currently configured so that it submits a market order on TS fill. Meaning that a market order will be submitted to IB when SigBridge receives an "order filled" notification email from TradeStation.
