@@ -5,6 +5,7 @@ This is a python (v2.7) application with minimal UI that replicates trade signal
 - ibpy2
 - pyinstaller
 - pyyaml
+- quickfix
 
 ## Configuration
 IB clients are configured in a yaml file under "conf" dir. 
@@ -13,7 +14,7 @@ TradeStation needs to have "Trade manager" configured to send open/filled order 
 
 ## Run & Test
 Run:  
-python SigBridge.py
+python Sig_Bridge.py
 
 Tests:  
 - Sending simulated trade signal as if it's from TradeStation: python tests/SendSig.py 
