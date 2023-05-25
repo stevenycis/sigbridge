@@ -3,7 +3,7 @@ This is a python (v2.7) application with minimal UI that replicates trade signal
 
 ## Dependencies
 - ibpy2
-- pyinstaller
+- pyinstaller 3.6 (wont work with newer versions)
 - pyyaml
 - quickfix
 
